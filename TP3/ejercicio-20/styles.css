@@ -1,0 +1,19 @@
+:root { --primary: #4f46e5; --secondary: #eef2ff; --dark: #111827; --text: #374151; --space: 1.2rem; --radius: 14px; }
+* { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, sans-serif; color: var(--text); }
+.navbar { position: fixed; z-index: 100; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: #111827ee; backdrop-filter: blur(8px); }
+.brand, .navbar a { color: white; text-decoration: none; font-weight: bold; } .navbar nav { display: flex; gap: 1.2rem; }
+.hero { min-height: 100vh; display: grid; align-items: center; padding: 7rem 8% 4rem; color: white; background: linear-gradient(#111827bb,#111827bb), url("https://placehold.co/1600x900?text=Hero+Image") center/cover; }
+.hero > div { max-width: 700px; animation: aparecer .8s ease both; } .hero h1 { font-size: clamp(2.4rem, 6vw, 5rem); margin: .5rem 0; }
+.eyebrow { letter-spacing: .2em; } .cta { display: inline-block; margin-top: 1rem; padding: .9rem 1.2rem; background: var(--primary); color: white; text-decoration: none; border-radius: var(--radius); }
+.section { padding: 6rem 8%; } .section h2 { font-size: 2.3rem; text-align: center; }
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space); }
+.services article, .testimonials article { padding: 1.5rem; background: var(--secondary); border-radius: var(--radius); }
+.testimonials { display: flex; gap: var(--space); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+.testimonials article { min-width: min(80vw, 400px); scroll-snap-align: start; }
+.contacto form { max-width: 650px; margin: auto; }
+label { display: block; margin: 1rem 0 .4rem; font-weight: bold; } input, textarea { width: 100%; padding: .8rem; border: 2px solid #cbd5e1; border-radius: 8px; }
+textarea { min-height: 140px; } button { margin-top: 1rem; padding: .8rem 1.3rem; border: 0; border-radius: 8px; background: var(--primary); color: white; cursor: pointer; }
+footer { padding: 2rem; text-align: center; background: var(--dark); color: white; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 900px) { .services { grid-template-columns: repeat(2, 1fr); } .navbar { flex-direction: column; gap: .7rem; } }
+@media (max-width: 600px) { .services { grid-template-columns: 1fr; } .navbar nav { flex-wrap: wrap; justify-content: center; } .section { padding: 5rem 6%; } }

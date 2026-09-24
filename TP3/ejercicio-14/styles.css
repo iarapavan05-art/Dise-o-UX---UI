@@ -1,0 +1,8 @@
+:root { --color-primario: #2563eb; --color-secundario: #dbeafe; --color-texto: #1f2937; --fondo: #f8fafc; --espaciado: 1rem; --radio: 12px; }
+* { box-sizing: border-box; } body { margin: 0; background: var(--fondo); color: var(--color-texto); font-family: Arial, sans-serif; }
+main { max-width: 1000px; margin: auto; padding: calc(var(--espaciado) * 2); }
+header { padding: var(--espaciado); background: var(--color-secundario); border-radius: var(--radio); }
+h1 { color: var(--color-primario); }
+.cards { display: flex; gap: var(--espaciado); margin: var(--espaciado) 0; }
+.cards article { flex: 1; padding: calc(var(--espaciado) * 2); background: white; border: 2px solid var(--color-primario); border-radius: var(--radio); }
+.dark { padding: .7rem 1rem; background: var(--color-primario); color: white; border: 0; border-radius: var(--radio); }
