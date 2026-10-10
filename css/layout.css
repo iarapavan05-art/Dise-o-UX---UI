@@ -1,0 +1,1 @@
+.container{width:min(calc(100% - 32px),var(--container));margin:auto}.section{padding:80px 0}.title{text-align:center;margin:0 0 64px;font:600 var(--fs-h2)/1.2 var(--font-display);letter-spacing:1.28px;text-transform:uppercase}
