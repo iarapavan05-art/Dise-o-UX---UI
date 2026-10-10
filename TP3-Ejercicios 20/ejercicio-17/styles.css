@@ -1,0 +1,12 @@
+* { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; }
+.navbar { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: #172554; }
+.logo, nav a { color: white; text-decoration: none; }
+nav { display: flex; gap: 1.5rem; }
+#menu-toggle, .hamburger { display: none; }
+@media (max-width: 700px) {
+  .hamburger { display: block; color: white; font-size: 1.7rem; cursor: pointer; }
+  nav { position: absolute; top: 100%; left: 0; right: 0; display: grid; max-height: 0; overflow: hidden; background: #172554; transition: max-height .3s ease; }
+  nav a { padding: 1rem 2rem; }
+  #menu-toggle:checked ~ nav { max-height: 300px; }
+}
+main { padding: 2rem; }

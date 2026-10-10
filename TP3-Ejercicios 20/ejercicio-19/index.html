@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ejercicio 19 - Multi-step</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<main>
+<h1>Registro</h1>
+<div class="steps">
+<section id="paso1"><h2>Paso 1: Datos personales</h2><form action="#paso2">
+<label for="nombre">Nombre</label><input id="nombre" name="nombre" required minlength="2">
+<label for="email">Email</label><input id="email" name="email" type="email" required>
+<button type="submit">Siguiente</button>
+</form></section>
+<section id="paso2"><h2>Paso 2: Cuenta</h2><form action="#">
+<label for="usuario">Usuario</label><input id="usuario" name="usuario" required minlength="4">
+<label for="clave">Contraseña</label><input id="clave" name="clave" type="password" required minlength="8">
+<a class="back" href="#paso1">Volver</a><button type="submit">Registrarme</button>
+</form></section>
+</div>
+</main>
+</body>
+</html>

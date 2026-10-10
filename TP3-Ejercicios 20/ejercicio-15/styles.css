@@ -1,0 +1,15 @@
+/* Desktop first: se parte de un layout amplio y se adapta con breakpoints. */
+* { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; }
+.layout { min-height: 100vh; display: grid; grid-template-columns: 230px 1fr; grid-template-rows: auto 1fr auto; grid-template-areas: "header header" "sidebar main" "footer footer"; }
+header { grid-area: header; padding: 1.5rem; background: #1e3a8a; color: white; }
+aside { grid-area: sidebar; padding: 1.5rem; background: #dbeafe; }
+main { grid-area: main; padding: 2rem; }
+footer { grid-area: footer; padding: 1rem; background: #111827; color: white; text-align: center; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.cards article { padding: 2rem; background: white; box-shadow: 0 2px 8px #0002; }
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; grid-template-areas: "header" "main" "footer"; }
+  aside { display: none; }
+  .cards { grid-template-columns: 1fr; }
+}

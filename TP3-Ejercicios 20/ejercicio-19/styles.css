@@ -1,0 +1,11 @@
+* { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, sans-serif; background: #f1f5f9; }
+main { max-width: 600px; margin: auto; padding: 2rem; }
+.steps section { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
+label { display: block; margin: 1rem 0 .4rem; font-weight: bold; }
+input { width: 100%; padding: .8rem; border: 2px solid #cbd5e1; border-radius: 7px; transition: .2s; }
+input:required:invalid { border-color: #dc2626; }
+input:required:valid { border-color: #16a34a; }
+button, .back { display: inline-block; margin-top: 1rem; padding: .7rem 1rem; border: 0; border-radius: 7px; background: #2563eb; color: white; text-decoration: none; cursor: pointer; }
+#paso2 { display: none; }
+#paso2:target { display: block; }
+#paso2:target ~ * { display: none; }
